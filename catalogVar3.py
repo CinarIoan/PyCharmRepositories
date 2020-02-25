@@ -91,7 +91,7 @@ for i in range (len(listaElevi)):
     print("Elevul " + str(i+1) + " se numeste: " + str(listaElevi[i].nume_elev) + " " + str(listaElevi[i].prenume_elev))
 
 
-
+print("SomeChangesmadeHere")
 # print(situatieElev.get_prezenta())
 
 
