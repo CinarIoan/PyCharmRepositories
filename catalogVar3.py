@@ -126,7 +126,7 @@ for i in range (len(listaElevi)):
     print ("Elevul " + str (i+1) + " se numeste: " + str (listaElevi[i].nume_elev) + " " + str (listaElevi[i].prenume_elev))
     print ("Adresa este: " + str (listaElevi[i].adresa.get_strada()) + " " + str (listaElevi[i].adresa.get_numar_casa()) + " " + str (listaElevi[i].adresa.get_localitate()))
 
-
+print("We are finished with the Address and we make a pull request")
 
 # print(situatieElev.get_prezenta())
 # situatieElev2 = SituatieElev()
