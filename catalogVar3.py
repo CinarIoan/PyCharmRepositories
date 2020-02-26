@@ -93,7 +93,7 @@ class SituatieElev:
     def get_absente(self):
         return self.numar_absente
 
-print("Introdu date despre catalog: ")
+
 print("We create here a conflict")
 catalogCinar = Catalog()
 
