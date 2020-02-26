@@ -94,7 +94,6 @@ class SituatieElev:
         return self.numar_absente
 
 print("Introdu date despre catalog: ")
-
 catalogCinar = Catalog()
 
 print("Profesor = " + str(catalogCinar.nume_profesor) +
@@ -114,10 +113,9 @@ for i in range(nr_elevi):
 
     elev = Elev(input("Numele Elevului? = "), input("Prenumele Elevului? = "))
 
-    print("We create here a conflict")
-    # some comment
-    situatieElev.a_absolvit()
 
+    situatieElev.a_absolvit()
+    print("Can this be a conflict?")
     elev.adresa.set_strada()
     elev.adresa.set_numar_casa()
     elev.adresa.set_localitate()
@@ -128,7 +126,7 @@ for i in range (len(listaElevi)):
     print ("Elevul " + str (i+1) + " se numeste: " + str (listaElevi[i].nume_elev) + " " + str (listaElevi[i].prenume_elev))
     print ("Adresa este: " + str (listaElevi[i].adresa.get_strada()) + " " + str (listaElevi[i].adresa.get_numar_casa()) + " " + str (listaElevi[i].adresa.get_localitate()))
 
-print("We are finished with the Address and we make a pull request")
+print("We are finished ")
 
 # print(situatieElev.get_prezenta())
 # situatieElev2 = SituatieElev()
