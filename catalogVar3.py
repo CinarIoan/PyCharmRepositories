@@ -113,9 +113,9 @@ for i in range(nr_elevi):
 
     elev = Elev(input("Numele Elevului? = "), input("Prenumele Elevului? = "))
 
-
+    situatieElev.e_prezent()
     situatieElev.a_absolvit()
-    print("Can this be a conflict?")
+
     elev.adresa.set_strada()
     elev.adresa.set_numar_casa()
     elev.adresa.set_localitate()
@@ -125,8 +125,6 @@ for i in range(nr_elevi):
 for i in range (len(listaElevi)):
     print ("Elevul " + str (i+1) + " se numeste: " + str (listaElevi[i].nume_elev) + " " + str (listaElevi[i].prenume_elev))
     print ("Adresa este: " + str (listaElevi[i].adresa.get_strada()) + " " + str (listaElevi[i].adresa.get_numar_casa()) + " " + str (listaElevi[i].adresa.get_localitate()))
-
-print("We are finished ")
 
 # print(situatieElev.get_prezenta())
 # situatieElev2 = SituatieElev()
