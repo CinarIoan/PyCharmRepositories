@@ -94,6 +94,7 @@ class SituatieElev:
         return self.numar_absente
 
 print("Introdu date despre catalog: ")
+print("We create here a conflict")
 catalogCinar = Catalog()
 
 print("Profesor = " + str(catalogCinar.nume_profesor) +
