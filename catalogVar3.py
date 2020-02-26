@@ -93,8 +93,8 @@ class SituatieElev:
     def get_absente(self):
         return self.numar_absente
 
+print("Introdu date despre catalog: ")
 
-print("We create here a conflict")
 catalogCinar = Catalog()
 
 print("Profesor = " + str(catalogCinar.nume_profesor) +
@@ -114,7 +114,8 @@ for i in range(nr_elevi):
 
     elev = Elev(input("Numele Elevului? = "), input("Prenumele Elevului? = "))
 
-    situatieElev.e_prezent()
+    print("We create here a conflict")
+    # some comment
     situatieElev.a_absolvit()
 
     elev.adresa.set_strada()
