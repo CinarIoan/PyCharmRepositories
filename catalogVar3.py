@@ -36,21 +36,47 @@ class Catalog:
     def set_an_calendaristic(self):
         self.an_calendaristic = input("An calendaristic? = ")
 
-class Elev:
+class Adresa:
+
+    def __init__(self):
+        pass
+
+    def set_strada(self):
+        self.strada = input("Strada? = ")
+
+    def get_strada(self):
+        return self.strada
+
+    def set_numar_casa(self):
+        self.numar_casa = input("Numar casa? = ")
+    def get_numar_casa(self):
+        return self.numar_casa
+
+    def set_localitate(self):
+        self.localitate = input("Localitate? = ")
+    def get_localitate(self):
+        return self.localitate
+
+class Elev(Adresa):
 
     def __init__(self, nume_elev, prenume_elev):
+        super().__init__()
         self.nume_elev = nume_elev
         self.prenume_elev = prenume_elev
+        self.adresa = Adresa()
 
 class SituatieElev:
 
+
     def e_prezent(self):
+        self.numar_absente = 0
         self.prezent = input("Prezent (1) / Absent (0) ? = ")
         if self.prezent == 1:
-            prezent = 1
+            self.prezent = 1
             return True
         else:
-            prezent = 0
+            self.prezent = 0
+            self.numar_absente += 1
             return False
 
     def a_absolvit(self):
@@ -63,6 +89,9 @@ class SituatieElev:
             return False
     def get_prezenta(self):
         return self.prezent
+
+    def get_absente(self):
+        return self.numar_absente
 
 print("Introdu date despre catalog: ")
 catalogCinar = Catalog()
@@ -77,27 +106,27 @@ nr_elevi = (input("Cati elevi doresti sa introduci? = "))
 nr_elevi = int(nr_elevi)
 situatieElev = SituatieElev()
 listaElevi = []
+
+adresa = Adresa()
+
 for i in range(nr_elevi):
 
     elev = Elev(input("Numele Elevului? = "), input("Prenumele Elevului? = "))
 
-
-
     situatieElev.e_prezent()
     situatieElev.a_absolvit()
+
+    elev.adresa.set_strada()
+    elev.adresa.set_numar_casa()
+    elev.adresa.set_localitate()
+
     listaElevi.append(elev)
 
 for i in range (len(listaElevi)):
-    print("Elevul " + str(i+1) + " se numeste: " + str(listaElevi[i].nume_elev) + " " + str(listaElevi[i].prenume_elev))
+    print ("Elevul " + str (i+1) + " se numeste: " + str (listaElevi[i].nume_elev) + " " + str (listaElevi[i].prenume_elev))
+    print ("Adresa este: " + str (listaElevi[i].adresa.get_strada()) + " " + str (listaElevi[i].adresa.get_numar_casa()) + " " + str (listaElevi[i].adresa.get_localitate()))
 
 
-print("SomeChangesmadeHere")
 
-
-print("Changes on a branch")
-print("This will really be on a branch only")
 # print(situatieElev.get_prezenta())
-
-
 # situatieElev2 = SituatieElev()
-
